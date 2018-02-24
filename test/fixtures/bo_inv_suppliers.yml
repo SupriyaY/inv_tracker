@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  business_owner: one
+  supplier: one
+  inventory: one
+
+two:
+  business_owner: two
+  supplier: two
+  inventory: two
