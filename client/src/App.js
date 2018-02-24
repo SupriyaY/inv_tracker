@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Homepage from './components/Homepage'
+
+
+// import axios from 'axios'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      hello!
+      <Homepage/>
       </div>
     );
   }
