@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {ContainerHome} from './StyledComponents/Containers'
 import Inventory from './StyledComponents/img/homepage.jpg'
-import {Header} from './StyledComponents/HeaderFooter'
+import {Header, Footer} from './StyledComponents/HeaderFooter'
  
 class Homepage extends Component{
 

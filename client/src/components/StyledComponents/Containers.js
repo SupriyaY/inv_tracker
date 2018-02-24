@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Inventory from './img/homepage.jpg'
+import Inventory from './img/boxes.jpg'
 
 
 
