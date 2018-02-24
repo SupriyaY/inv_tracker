@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Homepage from './components/Homepage'
+import { Header, Footer } from './components/StyledComponents/HeaderFooter'
+
 
 
 // import axios from 'axios'
@@ -7,8 +9,14 @@ import Homepage from './components/Homepage'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
+      <Header>
+        </Header>
+      <div>
       <Homepage/>
+      </div>
+      <Footer>
+</Footer>
       </div>
     );
   }
