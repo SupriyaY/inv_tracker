@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Homepage from './components/Homepage'
 import { Header, Footer } from './components/StyledComponents/HeaderFooter'
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
-
+import UsersShow from './components/UsersShow'
+import UserView from './components/UserView'
 
 
 // import axios from 'axios'
@@ -10,24 +11,26 @@ import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
 
 
 class App extends Component {
-  state = {}
+  state = {
+    users: [{}]
+  }
 
   render() {
 
-// const homepageComponent = () => {
-// return
-// (<Homepage /> )
-// }
+
 
     return (
       <div>
       <Header>
-        </Header>
+      </Header>
         <Router>
           <div>
       <Switch>
-<Homepage/>
-<Route exact path="/users" /> 
+
+<Route exact path="/" component={Homepage}/>
+<Route exact path="/users" component={UsersShow} /> 
+<Route exact path="users/:userid" component={UserView} />
+
 </Switch>      
 </div>
  </Router>
