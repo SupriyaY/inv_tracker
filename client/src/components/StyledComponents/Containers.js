@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Inventory from './img/boxes.jpg'
+import Merchandise from './img/merch.jpg'
 
 
 
@@ -14,14 +15,18 @@ export const Container = styled.div`
     
     `
 export const BusinessOwnersContainer = Container.extend`
-
+ background: url(${Merchandise}) center no-repeat;
+background-size: cover;
 `
 export const ContainerHome = Container.extend`
  background: url(${Inventory}) center no-repeat;
 background-size: cover;
 `
 
-
+export const SingleOwnerContainer = Container.extend`
+ background: url(${Merchandise}) center no-repeat;
+background-size: cover;
+`
 
 
 
@@ -30,6 +35,7 @@ background-size: cover;
 export default {
 ContainerHome,
 Container,
-BusinessOwnersContainer
+BusinessOwnersContainer,
+SingleOwnerContainer
 
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Homepage from './components/Homepage'
-import { Header, Footer } from './components/StyledComponents/HeaderFooter'
+// import { Header, Footer } from './components/StyledComponents/HeaderFooter'
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
 import UsersShow from './components/UsersShow'
 import UserView from './components/UserView'
@@ -21,22 +21,22 @@ class App extends Component {
 
     return (
       <div>
-      <Header>
-      </Header>
+      {/* <Header>
+      </Header> */}
         <Router>
           <div>
       <Switch>
 
 <Route exact path="/" component={Homepage}/>
 <Route exact path="/users" component={UsersShow} /> 
-<Route exact path="users/:userid" component={UserView} />
+<Route exact path="/users/:id" component={UserView} />
 
 </Switch>      
 </div>
  </Router>
 
-      <Footer>
-</Footer>
+      {/* <Footer>
+</Footer> */}
 </div>
     );
   }

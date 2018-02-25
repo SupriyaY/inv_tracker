@@ -24,7 +24,6 @@ align-self: flex-end;
 
 
 
-
 export default{
 Header, Footer
 

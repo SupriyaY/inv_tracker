@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
-import { BusinessOwnersContainer } from './StyledComponents/Containers'
+// import { SingleOwnerContainer } from './StyledComponents/Containers'
 
 
 class UserView extends Component {
@@ -13,11 +13,8 @@ render() {
 
 return(
 
-<BusinessOwnersContainer>
-<div>Hello from the usersview page</div>
+<div>Hello from the userview page</div>
 
-
-</BusinessOwnersContainer>
 
 )
 
