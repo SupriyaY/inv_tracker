@@ -6,7 +6,6 @@ import UsersShow from './components/UsersShow'
 import UserView from './components/UserView'
 
 
-// import axios from 'axios'
 
 
 
@@ -14,6 +13,16 @@ class App extends Component {
   state = {
     users: [{}]
   }
+
+
+//Axios Calls //is this correct?
+
+async componentWillMount (){
+const resUsers = 
+
+}
+
+
 
   render() {
 
