@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Inventory from './img/boxes.jpg'
 import Merchandise from './img/merch.jpg'
+import Clothing from './img/clothing.jpg'
 
 
 
@@ -15,7 +16,7 @@ export const Container = styled.div`
     
     `
 export const BusinessOwnersContainer = Container.extend`
- background: url(${Merchandise}) center no-repeat;
+ background: url(${Clothing}) center no-repeat;
 background-size: cover;
 `
 export const ContainerHome = Container.extend`
@@ -24,7 +25,7 @@ background-size: cover;
 `
 
 export const SingleOwnerContainer = Container.extend`
- background: url(${Merchandise}) center no-repeat;
+ background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
 background-size: cover;
 `
 

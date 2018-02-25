@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Homepage from './components/Homepage'
-// import { Header, Footer } from './components/StyledComponents/HeaderFooter'
+import { Header, Footer } from './components/StyledComponents/HeaderFooter'
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
 import UsersShow from './components/UsersShow'
 import UserView from './components/UserView'
@@ -21,8 +21,8 @@ class App extends Component {
 
     return (
       <div>
-      {/* <Header>
-      </Header> */}
+      <Header>
+      </Header>
         <Router>
           <div>
       <Switch>
@@ -35,9 +35,9 @@ class App extends Component {
 </div>
  </Router>
 
-      {/* <Footer>
-</Footer> */}
-</div>
+  
+<Footer/> 
+ </div>
     );
   }
 }

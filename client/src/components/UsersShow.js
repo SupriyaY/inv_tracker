@@ -14,7 +14,7 @@ class UsersShow extends Component {
             <BusinessOwnersContainer>
                 Hello form the usershow page!
 
-                 <Link to="users/:id">UserView</Link> 
+                 <Link to="/users/:id">UserView</Link> 
 
                 </BusinessOwnersContainer>
         )
