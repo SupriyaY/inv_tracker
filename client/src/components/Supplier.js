@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { SupplierContainer } from './StyledComponents/Containers'
+import { SingleOwnerContainer } from './StyledComponents/Containers'
 
 
 class Supplier extends Component {
@@ -11,9 +11,9 @@ render() {
 return (
 
 
- <SupplierContainer>   
+ <SingleOwnerContainer>   
 Hello from the supplier page!
-</SupplierContainer>
+</SingleOwnerContainer>
 
 
 
