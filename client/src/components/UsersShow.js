@@ -40,22 +40,6 @@ height: 40vh;
 
 class UsersShow extends Component {
 
-    state = {
-      business_owner:[{
-        id: 1,
-        name: "Alexa Chung",
-        business_name: "Chung,Inc"
-    },
-    {
-
-id: 2,
-name: "Premal Muni",
-business_name: "In-Sattava"
-    }
-
-]
-
-    }
 
     render() {
 
@@ -65,11 +49,12 @@ business_name: "In-Sattava"
             <BusinessOwnersContainer>
                 <Link to="/users/:id">
                 <UserCard>
-                    <h1>Name:{this.state.business_owner.name}</h1>
-                    <h2>Business Name:{this.state.business_owner.business_name}</h2>
+                    <h1>Name:</h1>
+                    <h2>Business Name:</h2>
 </UserCard>
                  </Link> 
 
+<Link to="/users/new">Sign up</Link>
                 </BusinessOwnersContainer>
         )
 
