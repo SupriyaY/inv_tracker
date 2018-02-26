@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ContainerOne } from './StyledComponents/Containers'
 import { Redirect } from 'react-router-dom'
+import { SingleOwnerContainer } from './StyledComponents/Containers'
+
 
 
 class NewUser extends Component {
@@ -13,10 +15,9 @@ render () {
 return (
 
 
-
-<div>
+<SingleOwnerContainer>
     Hello from newuser page!
-</div>
+</SingleOwnerContainer>
 
 
 
