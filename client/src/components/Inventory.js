@@ -10,9 +10,9 @@ render (){
 
 return (
 
-<div>
+<SingleOwnerContainer>    
     Hello from the inventory page!
-</div>
+</SingleOwnerContainer>
 
 )
 
