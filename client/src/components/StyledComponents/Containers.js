@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Inventory from './img/boxes.jpg'
 import Merchandise from './img/merch.jpg'
 import Clothing from './img/clothing.jpg'
+import Supplier from './img/supplier.jpg'
 
 
 
@@ -29,7 +30,10 @@ export const SingleOwnerContainer = Container.extend`
 background-size: cover;
 `
 
-
+export const SupplierContainer = Container.extend`
+ background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Supplier}) center no-repeat;
+background-size: cover;
+`
 
 
 
@@ -37,6 +41,7 @@ export default {
 ContainerHome,
 Container,
 BusinessOwnersContainer,
-SingleOwnerContainer
+SingleOwnerContainer,
+SupplierContainer
 
 }

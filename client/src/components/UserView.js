@@ -46,7 +46,7 @@ return(
 Hello from the userview page
 </UserCard>
 
-        <Link to="/users/:id/inventory/:id">Inventory</Link> 
+        <Link to="/users/:id/inventories/:id">Inventory</Link> 
 </SingleOwnerContainer>
 
 

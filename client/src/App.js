@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Homepage from './components/Homepage'
-import { Header, Footer } from './components/StyledComponents/HeaderFooter'
+// import { Header, Footer } from './components/StyledComponents/HeaderFooter'
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
 import UsersShow from './components/UsersShow'
 import UserView from './components/UserView'
 import Inventory from './components/Inventory'
+import Supplier from './components/Supplier'
 
 
 
@@ -33,8 +34,8 @@ class App extends Component {
 
     return (
       <div>
-      <Header>
-      </Header>
+      {/* <Header>
+      </Header> */}
         <Router>
           <div>
       <Switch>
@@ -42,13 +43,14 @@ class App extends Component {
 <Route exact path="/" component={Homepage}/>
 <Route exact path="/users" component={UsersShow} /> 
 <Route exact path="/users/:id" component={UserView} />
-<Route exact path="/users/:id/inventory/:id" component={Inventory} />
+<Route exact path="/users/:id/inventories/:id" component={Inventory} />
+<Route exact path="/inventories/:id/suppliers" component={Supplier} />
 </Switch>      
 </div>
  </Router>
 
   
-<Footer/> 
+{/* <Footer/>  */}
  </div>
     );
   }
