@@ -41,7 +41,7 @@ class App extends Component {
 <Route exact path="/" component={Homepage}/>
 <Route exact path="/users" component={UsersShow} /> 
 <Route exact path="/users/:id" component={UserView} />
-
+<Route exact path="/users/:id/inventory" component={UserView} />
 </Switch>      
 </div>
  </Router>

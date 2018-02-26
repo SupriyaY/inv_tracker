@@ -10,8 +10,8 @@ height: 40vh;
             background-color:#F7F9F9;
             display:flex;
             flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+            /* justify-content: space-around; */
+            align-items: right;
 
             p{
                 text-align: center;
@@ -40,13 +40,22 @@ height: 40vh;
 
 class UsersShow extends Component {
 
-    state=[{
+    state = {
+      business_owner:[{
         id: 1,
         name: "Alexa Chung",
         business_name: "Chung,Inc"
-    }]
+    },
+    {
 
+id: 2,
+name: "Premal Muni",
+business_name: "In-Sattava"
+    }
 
+]
+
+    }
 
     render() {
 
@@ -56,7 +65,8 @@ class UsersShow extends Component {
             <BusinessOwnersContainer>
                 <Link to="/users/:id">
                 <UserCard>
-             Hello form the usershow page!
+                    <h1>Name:{this.state.business_owner.name}</h1>
+                    <h2>Business Name:{this.state.business_owner.business_name}</h2>
 </UserCard>
                  </Link> 
 
