@@ -16,7 +16,7 @@ export const Container = styled.div`
     
     `
 export const BusinessOwnersContainer = Container.extend`
- background: url(${Clothing}) center no-repeat;
+ background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
 background-size: cover;
 `
 export const ContainerHome = Container.extend`

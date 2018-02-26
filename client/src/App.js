@@ -17,7 +17,7 @@ class App extends Component {
 
 //Axios Calls //is this correct?
 
-// async componentWillMount (){
+// async componentWillMount () {
 // const resOwners = await axios.get('/api/business_owners')
 // const resInv = await axios.get('/api/inventories')
 // const resSupplier = await axois.get('/api/suppliers')

@@ -3,7 +3,49 @@ import { Redirect, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {BusinessOwnersContainer} from './StyledComponents/Containers'
 
+
+const UserCard = styled.div`
+height: 40vh;
+            width: 30vw;
+            background-color:#F7F9F9;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            p{
+                text-align: center;
+                width: 50%;
+            }
+
+            h1, h2, h3 {
+                margin: 0;
+            }
+
+            a {
+                font-size: 1.5em;
+                text-decoration: none;
+                color:#FFC857;
+                :hover{
+                    color:#2E4052;
+                }
+            }
+
+
+`
+
+
+
+
+
 class UsersShow extends Component {
+
+    state=[{
+        id: 1,
+        name: "Alexa Chung",
+        business_name: "Chung,Inc"
+    }]
+
 
 
     render() {
@@ -12,9 +54,11 @@ class UsersShow extends Component {
 
 
             <BusinessOwnersContainer>
-                Hello form the usershow page!
-
-                 <Link to="/users/:id">UserView</Link> 
+                <Link to="/users/:id">
+                <UserCard>
+             Hello form the usershow page!
+</UserCard>
+                 </Link> 
 
                 </BusinessOwnersContainer>
         )

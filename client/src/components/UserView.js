@@ -6,6 +6,7 @@ import { SingleOwnerContainer } from './StyledComponents/Containers'
 
 class UserView extends Component {
 
+    
 
 
 render() {
