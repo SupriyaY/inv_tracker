@@ -4,29 +4,29 @@ class Api::BusinessOwnersController < ApplicationController
     render json: @business_owners
     end
     
-#     def show
-#     @user = User.find(params[:id])
-#     render json: @user 
-#     end
+    def show
+    @business_owner = BusinessOwner.find(params[:id])
+    render json: @business_owner 
+    end
 
-#     def create
-#     @user = User.create!(user_params)
-#     render json: @user
-#     end
+    def create
+    @business_owner = BusinessOwner.create!(business_owners_params)
+    render json: @business_owner
+    end
 
-#     def update
-#     @user = User.find(params[:id])
-#     @user.update!(user_params)
-#     render json: @user
-#     end
+    def update
+    @business_owners = BusinessOwner.find(params[:id])
+    @business_owner.update!(business_owner_params)
+    render json: @business_owner
+    end
 
-#     def destroy
-#     @user = User.find(params[:id]).delete
-#     render status: :ok
-#     end
+    def destroy
+    @business_owner = BusinessOwner.find(params[:id]).delete
+    render status: :ok
+    end
 
-#     private
-#     def user_params
-#         params.require(:user).permit(:name, :photo_url)
-#     end
+    private
+    def user_params
+        params.require(:business_owner).permit(:name, :business_name, :business_description, :business_address, :business_email, :business_phone)
+    end
 end
