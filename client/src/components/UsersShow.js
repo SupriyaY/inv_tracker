@@ -40,9 +40,12 @@ class UsersShow extends Component {
 
 
 render () {
+    console.log(this.props)
     const businessOwner = this.props.owner.map((owner, index) => {
-        return (<Link to="/business_owners/:id">
-            <UserCard key={owner.id} >
+        return (<Link key={owner.id} to={`/business_owners/${owner.id}`}>
+            <UserCard >
+            
+                
                 <h2>{owner.name}</h2>
                 <p>{owner.business_name}</p>
             </UserCard>
@@ -53,10 +56,7 @@ render () {
 
 
             <BusinessOwnersContainer>
-                {
-                 businessOwner
-                }
-<br />
+                {businessOwner}
 <Link to="/users/new">Sign up</Link>
                 </BusinessOwnersContainer>
         )
