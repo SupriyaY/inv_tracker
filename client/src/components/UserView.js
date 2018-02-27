@@ -38,11 +38,13 @@ class UserView extends Component {
 
     state = {
         business_owner: {},
+        inventories: [],
         redirect: false
     }
     
     async componentWillMount() {
-      await  this.getBOInfo()
+       this.getBOInfo()
+        this.getItems()
     }
 
     getBOInfo = async() => {
@@ -58,6 +60,23 @@ this.setState({business_owner: res.data})
 
     }
 }
+
+
+    getItems = async () => {
+        try {
+            const business_ownerId = this.props.match.params.id
+            const inventoryId = this.props.match.params.id
+            const res = await axios.get(`/api/business_owners/${business_ownerId}/inventories`)
+
+            this.setState({ inventories: res.data })
+
+        } catch (err) {
+            console.log(err)
+
+
+        }
+        console.log(this.state.inventories)
+    }
 
 
 render() {
@@ -77,9 +96,12 @@ return(
 
         </UserCard>
         
+
+   
+
          
-        
-        <Link to="/business_owners/:id/inventories/:id">Inventory</Link> 
+{/*         
+        <Link to={`/business_owners/${this.state.business_owner.id}/inventories/`}>Inventory</Link>  */}
 </SingleOwnerContainer>
 
 

@@ -65,7 +65,7 @@ return (
     <UserCard>
         <h2>{this.state.inventory.category}</h2>
     </UserCard>
-    <Link to="business_owners/:id/inventories/:id/suppliers/:id">Supplier</Link>
+    <Link to="suppliers/:id">Supplier</Link>
 </SingleOwnerContainer>
 
 )

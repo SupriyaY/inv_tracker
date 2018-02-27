@@ -37,17 +37,7 @@ class App extends Component {
       console.log(error)
     }}
 
-    getItems = async () => {
-      const res = await axios.get('/api/inventories')
-      const resItems = res.data
-      try {
-        console.log(resItems)
-        this.setState({ inventories: resItems })
-      }
-      catch (error) {
-        console.log(error)
-      }}
-
+ 
       // const resSupplier = await axois.get('/api/suppliers')
       render() {
 
@@ -55,7 +45,6 @@ class App extends Component {
 
         const userViewComponent = (props) => (<UserView owner={this.state.business_owners} getOwners={this.getOwners} {...props} />)
 
-        const inventoryComponent = (props) => (<Inventory item={this.state.inventories} getItems={this.getItems} {...props}/>)
 
         return (
           <div>

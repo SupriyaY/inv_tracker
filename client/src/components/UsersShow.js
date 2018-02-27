@@ -57,7 +57,7 @@ render () {
 
             <BusinessOwnersContainer>
                 {businessOwner}
-<Link to="/users/new">Sign up</Link>
+<Link to="/business_owners/new">Sign up</Link>
                 </BusinessOwnersContainer>
         )
 
