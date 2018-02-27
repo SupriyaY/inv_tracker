@@ -21,10 +21,27 @@ name: "Alexa Chung",
 business_name: "Chung, Inc",
 business_description: "Curating collections of denim for Couture Houses",
 business_address: "123 Lakeview Street, London, England 12345",
-business_email: "chung1@gmal.com",
+business_email: "chung1@gmail.com",
 business_phone: "07712345678"
 )
 
+jason = BusinessOwner.create(
+name: "Jason Wu",
+business_name: "Wu, Inc",
+business_description: "Curating collections of dressers for first ladies",
+business_address: "123 Lakeview Street, New York, NY 12345",
+business_email: "wu1@gmail.com",
+business_phone: "07743345678"
+)
+
+olivier = BusinessOwner.create(
+name: "Olivier Rousteing",
+business_name: "Rousteing, Inc",
+business_description: "Curating a collection of nude heels",
+business_address: "123 Lucille Street, Paris, France 12345",
+business_email: "rousteing1@gmail.com",
+business_phone: "07743343478"
+)
 
 jeans = Inventory.create(
 category: "Clothing",
@@ -32,6 +49,17 @@ name: "Jeans",
 description: "Cropped flared blue jeans"
 )
 
+dresses = Inventory.create(
+category: "Clothing",
+name: "Dresses",
+description: "White a-line dresses"
+)
+
+heels = Inventory.create(
+category: "Shoes",
+name: "Stilettos",
+description: "Four-inch nude stilettos"
+)
 
 amazon =  Supplier.create(
 name: "Amazon",
@@ -41,8 +69,21 @@ contact_email: "sups@amazon.com",
 contact_phone: "7407084979"
 )
 
+
 BoInvSupplier.create(
     business_owner: alexa,
     inventory: jeans,
+    supplier: amazon
+)
+
+BoInvSupplier.create(
+    business_owner: jason,
+    inventory: dresses,
+    supplier: amazon
+)
+
+BoInvSupplier.create(
+    business_owner: olivier,
+    inventory: heels,
     supplier: amazon
 )

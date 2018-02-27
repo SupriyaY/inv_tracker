@@ -13,7 +13,7 @@ return (
 <SingleOwnerContainer>    
     Hello from the inventory page!
     
-    <Link to="/inventories/:id/suppliers">Supplier</Link>
+    <Link to="users/:id/inventories/:id/suppliers">Supplier</Link>
 </SingleOwnerContainer>
 
 )

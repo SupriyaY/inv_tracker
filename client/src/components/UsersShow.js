@@ -14,7 +14,6 @@ height: 40vh;
             align-items: right;
 
             p{
-                text-align: center;
                 width: 50%;
             }
 
@@ -23,7 +22,7 @@ height: 40vh;
             }
 
             a {
-                font-size: 1.5em;
+                font-size: 1.0em;
                 text-decoration: none;
                 color:#FFC857;
                 :hover{
@@ -37,31 +36,35 @@ height: 40vh;
 
 
 
-
 class UsersShow extends Component {
 
 
-    render() {
-
+render () {
+    const businessOwner = this.props.owner.map((owner, index) => {
+        return (<Link to="/users/:id">
+            <UserCard key={owner.id} >
+                <h2>{owner.name}</h2>
+                <p>{owner.business_name}</p>
+            </UserCard>
+        </Link>)
+    })
+    console.log(this.props.owner)
         return (
 
 
             <BusinessOwnersContainer>
-                <Link to="/users/:id">
-                <UserCard>
-                    <h1>Name:</h1>
-                    <h2>Business Name:</h2>
-</UserCard>
-                 </Link> 
-
+                {
+                 businessOwner
+                }
+<br />
 <Link to="/users/new">Sign up</Link>
                 </BusinessOwnersContainer>
         )
 
     }
+
+
 }
-
-
 
 
 
