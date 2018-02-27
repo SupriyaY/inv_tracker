@@ -17,7 +17,7 @@ return (
 
 
 
- <Link to ="/users">Business Owners</Link> 
+ <Link to ="/business_owners">Business Owners</Link> 
 </ContainerHome>
 </div>
 )

@@ -54,11 +54,11 @@ const userShowComponent = (props) => (<UsersShow owner={this.state.business_owne
       <Switch>
 
 <Route exact path="/" component={Homepage}/>
-<Route exact path="/users" component={userShowComponent} /> 
- <Route exact path="/users/new" component={NewUser} />
-<Route exact path="/users/:id" component={UserView} />
-<Route exact path="/users/:id/inventories/:id" component={Inventory} />
-<Route exact path="/inventories/:id/suppliers" component={Supplier} />
+<Route exact path="/business_owners" component={userShowComponent} /> 
+ <Route exact path="/business_owners/new" component={NewUser} />
+<Route exact path="/business_owners/:id" component={UserView} />
+<Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
+<Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
 </Switch>      
 </div>
  </Router>

@@ -41,7 +41,7 @@ class UsersShow extends Component {
 
 render () {
     const businessOwner = this.props.owner.map((owner, index) => {
-        return (<Link to="/users/:id">
+        return (<Link to="/business_owners/:id">
             <UserCard key={owner.id} >
                 <h2>{owner.name}</h2>
                 <p>{owner.business_name}</p>
