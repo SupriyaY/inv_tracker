@@ -37,14 +37,15 @@ const UserCard = styled.div`
 class UserView extends Component {
 
     state = {
-        business_owner: {},
-        inventories: [],
+        business_owner: {
+            inventories: []
+        },
         redirect: false
     }
     
     async componentWillMount() {
        this.getBOInfo()
-        this.getItems()
+        // this.getItems()
     }
 
     getBOInfo = async() => {
@@ -62,21 +63,21 @@ this.setState({business_owner: res.data})
 }
 
 
-    getItems = async () => {
-        try {
-            const business_ownerId = this.props.match.params.id
-            const inventoryId = this.props.match.params.id
-            const res = await axios.get(`/api/business_owners/${business_ownerId}/inventories`)
+    // getItems = async () => {
+    //     try {
+    //         const business_ownerId = this.props.match.params.id
+    //         const inventoryId = this.props.match.params.id
+    //         const res = await axios.get(`/api/business_owners/${business_ownerId}/inventories`)
 
-            this.setState({ inventories: res.data })
+    //         this.setState({ inventories: res.data })
 
-        } catch (err) {
-            console.log(err)
+    //     } catch (err) {
+    //         console.log(err)
 
 
-        }
-        console.log(this.state.inventories)
-    }
+    //     }
+    //     console.log(this.state.inventories)
+    // }
 
 
 render() {
@@ -93,6 +94,21 @@ return(
             <p>{this.state.business_owner.business_description}</p>
             <p>{this.state.business_owner.business_email}</p>
             <p>{this.state.business_owner.business_phone}</p>
+        </UserCard>
+
+
+        <UserCard>
+            {this.state.business_owner.inventories.map((inventory, index) => {  
+            
+                return (
+
+<div>{inventory.category}</div>
+                )
+
+        
+        
+        })
+    }
 
         </UserCard>
         
