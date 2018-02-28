@@ -27,7 +27,7 @@ export const Header = styled.header`
 export const Footer = styled.header`
 height: 15vh;
 width: 100vw;
-background-color: #2B3B53;
+background-color: white;
 align-self: flex-end;
 `
 

@@ -23,7 +23,7 @@ class Api::InventoriesController < ApplicationController
     
     def create
         @inventory = Inventory.create!(inventory_params)
-        redirect_to "users/#{user.id}/inventories/#{@inventory.id}" 
+        redirect_to "business_owners/#{business_owner.id}/inventories/#{@inventory.id}" 
     end
     
     def update

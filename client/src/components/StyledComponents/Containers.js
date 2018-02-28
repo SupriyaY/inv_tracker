@@ -4,6 +4,7 @@ import Inventory from './img/boxes.jpg'
 import Merchandise from './img/merch.jpg'
 import Clothing from './img/clothing.jpg'
 import Supplier from './img/supplier.jpg'
+import Style from './img/store.jpg'
 
 
 
@@ -32,7 +33,7 @@ export const BusinessOwnersContainer = Container.extend`
 background-size: cover;
 `
 export const ContainerHome = Container.extend`
- background: linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
+ background: linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)),url(${Clothing}) center no-repeat;
 background-size: cover;
 width: 100vw;
 min-height: 100vh;
@@ -47,7 +48,7 @@ background-size: cover;
 export const SupplierContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Supplier}) center no-repeat;
  width: 100vw;
- min-height: 100vh;
+ min-height: 80vh;
 background-size: cover;
 `
 
@@ -59,7 +60,7 @@ export const WordsContainer = styled.div`
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        color: white;
+        color: black;
         text-align: center;
         
         h1{
@@ -70,7 +71,7 @@ export const WordsContainer = styled.div`
         p{
             font-size: 1.5em;
         }
-        a{
+        /* a{
             font-size: 4em;
             font-family: 'Lobster', cursive;
             color: Black;
@@ -78,7 +79,7 @@ export const WordsContainer = styled.div`
             :hover {
                 color:#blue;
             }
-        }
+        } */
 
 `
 
