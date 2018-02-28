@@ -82,12 +82,11 @@ class App extends Component {
         return (
           <div>
             <HomeHeader>
-              <img src={Logo} alt="Link" />
+           <a href="/"><img src={Logo} alt="Link"/></a>
             </HomeHeader>
             <Router>
               <div>
                 <Switch>
-
                   <Route exact path="/" component={Homepage} />
                   <Route exact path="/business_owners" component={userShowComponent} />
                   <Route exact path="/business_owners/new" render={newUserComponent} />

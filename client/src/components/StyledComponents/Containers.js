@@ -5,7 +5,7 @@ import Merchandise from './img/merch.jpg'
 import Clothing from './img/clothing.jpg'
 import Supplier from './img/supplier.jpg'
 
-
+//page container
 
 export const Container = styled.div`
     width: 100vw;
