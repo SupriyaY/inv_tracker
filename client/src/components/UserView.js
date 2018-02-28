@@ -45,7 +45,6 @@ class UserView extends Component {
     
     async componentWillMount() {
        this.getBOInfo()
-        // this.getItems()
     }
 
     getBOInfo = async() => {
@@ -101,11 +100,16 @@ return(
             {this.state.business_owner.inventories.map((inventory, index) => {  
             
                 return (
-
+                    <div>
+                        
 <div>{inventory.category}</div>
+<div>{inventory.name}</div>
+<div>{inventory.description}</div>
+</div>
+                   
                 )
 
-        
+            
         
         })
     }

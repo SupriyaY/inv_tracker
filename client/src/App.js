@@ -14,8 +14,9 @@ import axios from 'axios'
 
 class App extends Component {
   state = {
-    business_owners: []
-    // inventories: []
+    business_owners: [],
+    newOwner: {}
+
   }
 
 
@@ -36,6 +37,16 @@ class App extends Component {
     catch (error) {
       console.log(error)
     }}
+
+
+  addNewOwner = (newOwner) => {
+    const business_owners = [...this.state.business_owners]
+    business_owners.push(newOwner)
+    this.componentWillMount()
+    this.setState({ business_owners: business_owners })
+
+
+  }
 
  
       // const resSupplier = await axois.get('/api/suppliers')
