@@ -5,5 +5,6 @@ Rails.application.routes.draw do
         resources :suppliers
       end
     end
+      get '/categories' , to: 'categories#index'
   end
 end

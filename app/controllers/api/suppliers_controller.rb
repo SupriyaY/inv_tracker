@@ -17,7 +17,7 @@ class Api::SuppliersController < ApplicationController
     
         def create
         @supplier = Supplier.create!(post_params)
-        render json: @post
+        render json: @supplier
         end
     
         def update
@@ -27,7 +27,7 @@ class Api::SuppliersController < ApplicationController
         end
     
         def destroy
-        @supplier = Post.find(params[:id]).delete
+        @supplier = Supplier.find(params[:id]).delete
         render status: :ok
         end
     
