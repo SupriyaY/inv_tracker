@@ -42,4 +42,3 @@ class Api::InventoriesController < ApplicationController
         params.require(:inventory).permit(:category, :name, :description)
     end
 end
-end
