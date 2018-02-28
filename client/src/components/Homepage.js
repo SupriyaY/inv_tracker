@@ -3,6 +3,8 @@ import {ContainerHome} from './StyledComponents/Containers'
 import Inventory from './StyledComponents/img/boxes.jpg'
 import {Header, Footer} from './StyledComponents/HeaderFooter'
 import { Link } from 'react-router-dom'
+import {PageHolder} from './StyledComponents/Containers'
+import {WordsContainer} from './StyledComponents/Containers'
 
  
 class Homepage extends Component{
@@ -17,8 +19,12 @@ return (
 
 
 
- <Link to ="/business_owners">Welcome, Business Owners</Link> 
 </ContainerHome>
+
+
+<WordsContainer>
+        <Link to="/business_owners">Welcome, Business Owners</Link> 
+</WordsContainer>
 </div>
 )
 }

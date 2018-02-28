@@ -8,10 +8,15 @@ import NewUser from './components/NewUser'
 import Inventory from './components/Inventory'
 import Supplier from './components/Supplier'
 import Logo from './components/StyledComponents/img/logo.png'
+import styled from 'styled-components'
+
 
 import axios from 'axios'
 
 //uid1600-40646540-19
+
+
+
 
 class App extends Component {
   state = {
@@ -96,10 +101,8 @@ class App extends Component {
                 </Switch>
               </div>
             </Router>
-
-
             <Footer />
-          </div>
+            </div>
         );
       }
     }

@@ -14,7 +14,7 @@ width: auto;
 `
 
 export const Header = styled.header`
-   height: 10vh;
+   height: 15vh;
     width: 100vw;
     background-color: #2B3B53;
     align-self: flex-start;
@@ -25,7 +25,7 @@ export const Header = styled.header`
 
 
 export const Footer = styled.header`
-height: 10vh;
+height: 15vh;
 width: 100vw;
 background-color: #2B3B53;
 align-self: flex-end;
@@ -33,13 +33,22 @@ align-self: flex-end;
 
 export const HomeHeader = Header.extend`
 background-color: white;
+overflow: hidden;
 position: fixed;
-
+ 
+ a{
+     margin-top: 1vh;
+     margin-bottom: 1vh;
+margin-left: 3vw;
+height:80%;
+width: auto;
+ } 
 `
 
 
-export default{
-Header, Footer,
-HomeHeader,
-Logo
+export default {
+    Header, 
+    Footer,
+    HomeHeader,
+    Logo
 }
