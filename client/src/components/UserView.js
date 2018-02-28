@@ -38,7 +38,8 @@ class UserView extends Component {
 
     state = {
         business_owner: {
-            inventories: []
+            inventories: [],
+            suppliers: []
         },
         redirect: false
     }
@@ -113,6 +114,27 @@ return(
         
         })
     }
+
+        </UserCard>
+        <UserCard>
+            {this.state.business_owner.suppliers.map((supplier, index) => {
+
+                return (
+                    <div>
+
+                        <div>{supplier.name}</div>
+                        <div>{supplier.address}</div>
+                        <div>{supplier.contact_name}</div>
+                        <div>{supplier.contact_email}</div>
+                        <div>{supplier.contact_phone}</div>
+                    </div>
+
+                )
+
+
+
+            })
+            }
 
         </UserCard>
         
