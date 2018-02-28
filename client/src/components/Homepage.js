@@ -5,7 +5,7 @@ import {Header, Footer} from './StyledComponents/HeaderFooter'
 import { Link } from 'react-router-dom'
 import {PageHolder} from './StyledComponents/Containers'
 import {WordsContainer} from './StyledComponents/Containers'
-
+import {SupplierContainer} from './StyledComponents/Containers'
  
 class Homepage extends Component{
 
@@ -25,6 +25,10 @@ return (
 <WordsContainer>
         <Link to="/business_owners">Welcome, Business Owners</Link> 
 </WordsContainer>
+
+<SupplierContainer>
+    </SupplierContainer>
+
 </div>
 )
 }

@@ -32,11 +32,12 @@ export const BusinessOwnersContainer = Container.extend`
 background-size: cover;
 `
 export const ContainerHome = Container.extend`
- background: linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Inventory}) center no-repeat;
+ background: linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
 background-size: cover;
 width: 100vw;
-min-height: 80vh;
+min-height: 100vh;
 `
+
 
 export const SingleOwnerContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
@@ -45,14 +46,16 @@ background-size: cover;
 
 export const SupplierContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Supplier}) center no-repeat;
+ width: 100vw;
+ min-height: 100vh;
 background-size: cover;
 `
 
 export const WordsContainer = styled.div`
+        margin: 40 px;
         height: 80vh;
         width: 30vw;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
