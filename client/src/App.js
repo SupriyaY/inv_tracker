@@ -88,7 +88,7 @@ class App extends Component {
 
                   <Route exact path="/" component={Homepage} />
                   <Route exact path="/business_owners" component={userShowComponent} />
-                  <Route exact path="/business_owners/new" component={newUserComponent} />
+                  <Route exact path="/business_owners/new" render={newUserComponent} />
                   <Route exact path="/business_owners/:id" render={userViewComponent} />
                   <Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
                   <Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
