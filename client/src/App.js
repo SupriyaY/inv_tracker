@@ -48,6 +48,23 @@ class App extends Component {
 
   }
 
+  newOwnerPost = () => {
+
+    axios
+      .post("/api/business_owners", this.state.newOwner)
+      .then((response) => {
+        const updateNewOwner = this.state.newOwner
+
+
+        updateNewOwner._id = response.data._id
+        this.addNewOwner(updateNewOwner)
+
+      }).catch((error) => {
+        console.log(error)
+      })
+
+  }
+
  
       // const resSupplier = await axois.get('/api/suppliers')
       render() {
@@ -55,7 +72,11 @@ class App extends Component {
         const userShowComponent = (props) => (<UsersShow owner={this.state.business_owners} />)
 
         const userViewComponent = (props) => (<UserView owner={this.state.business_owners} getOwners={this.getOwners} {...props} />)
-
+        const newUserComponent = (props) => {
+          return (
+            <NewUser  {...props} handleChange={this.handleChange} newOwner={this.newOwnerPost} />
+          )
+        }
 
         return (
           <div>
@@ -67,7 +88,7 @@ class App extends Component {
 
                   <Route exact path="/" component={Homepage} />
                   <Route exact path="/business_owners" component={userShowComponent} />
-                  <Route exact path="/business_owners/new" component={NewUser} />
+                  <Route exact path="/business_owners/new" component={newUserComponent} />
                   <Route exact path="/business_owners/:id" render={userViewComponent} />
                   <Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
                   <Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
