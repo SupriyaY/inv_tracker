@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Homepage from './components/Homepage'
-import { Header, Footer } from './components/StyledComponents/HeaderFooter'
+import { HomeHeader, Footer } from './components/StyledComponents/HeaderFooter'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import UsersShow from './components/UsersShow'
 import UserView from './components/UserView'
 import NewUser from './components/NewUser'
 import Inventory from './components/Inventory'
 import Supplier from './components/Supplier'
+import Logo from './components/StyledComponents/img/logo.png'
 
 import axios from 'axios'
 
-
+//uid1600-40646540-19
 
 class App extends Component {
   state = {
@@ -80,8 +81,9 @@ class App extends Component {
 
         return (
           <div>
-            <Header>
-            </Header>
+            <HomeHeader>
+              <img src={Logo} alt="Link" />
+            </HomeHeader>
             <Router>
               <div>
                 <Switch>
