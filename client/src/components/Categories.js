@@ -1,29 +1,28 @@
-import React,  { Component }  from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
+// import React,  { Component }  from 'react'
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
 
-class Categories extends Component{
-
-
-
-
-render() {
-
-return (
+// class Categories extends Component{
 
 
 
-<div>
-</div>
+// render() {
+// const allCategories = this.props.category.map((category, index) => {
+// return(
 
 
 
 
 
-)
-}
-
-}
 
 
-export default Categories
+
+
+
+// )
+// }
+
+// }
+
+
+// export default Categories

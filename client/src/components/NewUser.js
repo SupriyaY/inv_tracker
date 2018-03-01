@@ -15,7 +15,7 @@ import styled from 'styled-components'
 //             justify-content: space-around;
 //             align-items: right;
 
-// `
+// `;
 
 
 const UserCard = styled.div`
@@ -32,10 +32,11 @@ top: 0;
     justify-content: center;
     align-items: center;
     position: fixed;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
+    border: 3px solid white;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
     border-radius: 5px;
+    z-index: 999;
 `;
-
 
 
 const CardButton = styled.button`

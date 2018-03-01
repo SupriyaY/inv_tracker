@@ -20,18 +20,21 @@ export const PageHolder = styled.div`
 `
 
 export const Container = styled.div`
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex: 1 0 auto;
+    /* flex: 1 0 auto; */
     
     `
 export const BusinessOwnersContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
 background-size: cover;
 flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 `
 export const ContainerHome = Container.extend`
  background: linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)),url(${Clothing}) center no-repeat;

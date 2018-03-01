@@ -5,15 +5,15 @@ import {BusinessOwnersContainer} from './StyledComponents/Containers'
 
 
 const UserCard = styled.div`
-height: 30vh;
-            width: 20vw;
+            height: 45vh;
+            width: 35vh;
             background-color:#F7F9F9;
             display:flex;
             flex-direction: column;
             /* justify-content: space-around; */
             align-items: center;
-            margin-top: 30px;
-            margin-right: 10px;
+            /* margin-top: 5px; */
+            margin: 10px;
 
             p{
                 width: 50%;
@@ -32,8 +32,9 @@ height: 30vh;
                 }
             }
 
-
 `
+
+
 
 
 
