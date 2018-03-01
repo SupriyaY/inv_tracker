@@ -54,9 +54,17 @@ class App extends Component {
 
   }
 
+handleChange = (event) => {
+const attribute = event.target.name
+const val = event.target.value
+const newOwner = {...this.state.newOwner }
+newOwner[attribute] = val
 
 
-  
+this.setState({newOwner})
+
+}
+
 
   newOwnerPost = () => {
 
