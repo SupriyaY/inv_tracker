@@ -25,7 +25,7 @@ top: 0;
     bottom: 0;
     margin: auto;
     width: 30vw;
-    height: 60vh;
+    height: 70vh;
     background-color: #E8D8B4;
     position: absolute;
     display: flex;

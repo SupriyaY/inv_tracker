@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Homepage from './components/Homepage'
 import { HomeHeader, Footer } from './components/StyledComponents/HeaderFooter'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
