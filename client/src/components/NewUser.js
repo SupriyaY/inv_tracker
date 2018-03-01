@@ -6,16 +6,35 @@ import styled from 'styled-components'
 
 
 
-const UserCard = styled.div`
-height: 60vh;
-            width: 40vw;
-            background-color:#F7F9F9;
-            display:flex;
-            flex-direction: column;
-            /* justify-content: space-around; */
-            align-items: right;
+// const UserCard = styled.div`
+// height: 60vh;
+//             width: 30vw;
+//             background-color:#F7F9F9;
+//             display:flex;
+//             flex-direction: column;
+//             justify-content: space-around;
+//             align-items: right;
 
-`
+// `
+
+
+const UserCard = styled.div`
+top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30vw;
+    height: 60vh;
+    background: #434D5B;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+`;
+
 
 
 const CardButton = styled.button`
@@ -28,7 +47,6 @@ const CardButton = styled.button`
         justify-content: center;
         align-items: center;
         font-size: 1em;
-        font-weight: 700;
         /* border-radius: 5; */
         border: 2px black solid;
 
@@ -38,22 +56,43 @@ const CardButton = styled.button`
             outline-style:none;
         }
 `;
+// const CardInput = styled.input`
+//   padding: 7px 0;
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: 14px;
+//   border-top: 0;
+//   border-right: 0;
+//   border-bottom: 1px solid #ddd;
+//   border-left: 0;
+//   transition: border-bottom-color .25s ease-in;
+//   &:focus {
+//     border-bottom-color: #4ee85e;
+//     outline: 0;
+//   }
+// `;
+
 const CardInput = styled.input`
   padding: 7px 0;
   width: 100%;
   font-family: inherit;
   font-size: 14px;
+  margin-bottom: 10px;
   border-top: 0;
   border-right: 0;
   border-bottom: 1px solid #ddd;
   border-left: 0;
   transition: border-bottom-color .25s ease-in;
+
   &:focus {
-    border-bottom-color: #4ee85e;
+    border-bottom-color: #e5195f;
     outline: 0;
   }
 `;
-// const CardWrapper = styled.div`
+
+
+
+/* // const CardWrapper = styled.div`
 //     overflow: hidden;
 //     padding: 0 0 32px;
 //     margin: 48px auto 0;
@@ -61,7 +100,9 @@ const CardInput = styled.input`
 //     font-family: Quicksand, arial, sans-serif;
 //     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
 //     border-radius: 5px;
-// `;
+// `; */
+
+
 const CardBody = styled.div`
   padding-right: 32px;
   padding-left: 32px;

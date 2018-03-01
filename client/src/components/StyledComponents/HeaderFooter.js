@@ -14,7 +14,7 @@ width: auto;
 `
 
 export const Header = styled.header`
-   height: 15vh;
+   height: 10vh;
     width: 100vw;
     background-color: #2B3B53;
     align-self: flex-start;
@@ -25,7 +25,7 @@ export const Header = styled.header`
 
 
 export const Footer = styled.header`
-height: 15vh;
+height: 10vh;
 width: 100vw;
 background-color: white;
 align-self: flex-end;
@@ -40,9 +40,13 @@ position: fixed;
      margin-top: 1vh;
      margin-bottom: 1vh;
 margin-left: 3vw;
-height:80%;
+height: 80%;
 width: auto;
  } 
+ img {
+     height: 8vh;
+
+ }
 `
 
 
