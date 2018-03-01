@@ -5,18 +5,31 @@ import { SingleOwnerContainer } from './StyledComponents/Containers'
 import styled from 'styled-components'
 
 
+
+const UserCard = styled.div`
+height: 60vh;
+            width: 40vw;
+            background-color:#F7F9F9;
+            display:flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            align-items: right;
+
+`
+
+
 const CardButton = styled.button`
-        height: 50px;
-        width: 250px;
+        height: 5vh;
+        width: 10vw;
         color:#F7F9F9;
         background-color:#FFC857;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 24px;
+        font-size: 1em;
         font-weight: 700;
-        border-radius: 20px;
+        /* border-radius: 5; */
         border: 2px black solid;
 
         :hover {
@@ -40,15 +53,15 @@ const CardInput = styled.input`
     outline: 0;
   }
 `;
-const CardWrapper = styled.div`
-    overflow: hidden;
-    padding: 0 0 32px;
-    margin: 48px auto 0;
-    width: 300px;
-    font-family: Quicksand, arial, sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-    border-radius: 5px;
-`;
+// const CardWrapper = styled.div`
+//     overflow: hidden;
+//     padding: 0 0 32px;
+//     margin: 48px auto 0;
+//     width: 300px;
+//     font-family: Quicksand, arial, sans-serif;
+//     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
+//     border-radius: 5px;
+// `;
 const CardBody = styled.div`
   padding-right: 32px;
   padding-left: 32px;
@@ -83,7 +96,8 @@ this.state.redirect ? <Redirect to ="/business_owners"/> :
 
 <SingleOwnerContainer>
             <div>
-                <CardWrapper>
+                <UserCard>
+                {/* <CardWrapper> */}
                     <Container onSubmit={this.handleSubmit} >
                         <CardBody>
                             <div>
@@ -101,7 +115,8 @@ this.state.redirect ? <Redirect to ="/business_owners"/> :
 
                         </CardBody>
                     </Container>
-                </CardWrapper>
+                {/* </CardWrapper> */}
+                </UserCard>
             </div>
 </SingleOwnerContainer>
 

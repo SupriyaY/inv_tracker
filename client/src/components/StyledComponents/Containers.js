@@ -53,7 +53,7 @@ background-size: cover;
 `
 
 export const WordsContainer = styled.div`
-        margin: 40 px;
+        margin: 40px;
         height: 80vh;
         width: 30vw;
         display: flex;
