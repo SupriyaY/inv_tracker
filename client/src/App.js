@@ -7,13 +7,13 @@ import UserView from './components/UserView'
 import NewUser from './components/NewUser'
 import Inventory from './components/Inventory'
 import Supplier from './components/Supplier'
+import Categories from './components/Categories'
 import Logo from './components/StyledComponents/img/logo.png'
 import styled from 'styled-components'
 
 
 import axios from 'axios'
 
-//uid1600-40646540-19
 
 
 
@@ -21,15 +21,17 @@ import axios from 'axios'
 class App extends Component {
   state = {
     business_owners: [],
-    newOwner: {}
+    newOwner: {},
+    categories: {}
 
   }
 
 
-  //Axios Calls //is this correct?
+  //Axios Calls 
 
   async componentWillMount() {
     this.getOwners()
+    this.getCategories()
   }
 
 
@@ -83,6 +85,22 @@ this.setState({newOwner})
 
   }
 
+// external api to categories
+  getCategories = async() => {
+    const res = await axios.get('http://localhost:3001/api/categories')
+    const resCategories = res.data
+try{
+  console.log(resCategories)
+  this.setState({categories: resCategories }) 
+}
+
+catch (error) {
+console.log(error)
+}}
+
+
+
+
  
       // const resSupplier = await axois.get('/api/suppliers')
       render() {
@@ -94,6 +112,7 @@ this.setState({newOwner})
           return (
             <NewUser  {...props} handleChange={this.handleChange} newOwner={this.newOwnerPost} />
           )
+          const categoriesComponent = (props) => (<Categeries category={this.state.categories}/> )
         }
 
         return (
@@ -110,6 +129,7 @@ this.setState({newOwner})
                   <Route exact path="/business_owners/:id" render={userViewComponent} />
                   <Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
                   <Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
+                  <Route exact path="/business_owners/categories" render={categoriesComponent} />
                 </Switch>
               </div>
             </Router>
