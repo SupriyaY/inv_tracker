@@ -104,6 +104,7 @@ console.log(error)
  
       // const resSupplier = await axois.get('/api/suppliers')
       render() {
+        const categoriesComponent = (props) => (<Categories category={this.state.categories} />)
 
         const userShowComponent = (props) => (<UsersShow owner={this.state.business_owners} />)
 
@@ -112,7 +113,7 @@ console.log(error)
           return (
             <NewUser  {...props} handleChange={this.handleChange} newOwner={this.newOwnerPost} />
           )
-          const categoriesComponent = (props) => (<Categeries category={this.state.categories}/> )
+          
         }
 
         return (
@@ -129,7 +130,7 @@ console.log(error)
                   <Route exact path="/business_owners/:id" render={userViewComponent} />
                   <Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
                   <Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
-                  <Route exact path="/business_owners/categories" render={categoriesComponent} />
+                  <Route exact path="/categories" render={categoriesComponent} />
                 </Switch>
               </div>
             </Router>
