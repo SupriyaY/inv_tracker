@@ -26,13 +26,14 @@ top: 0;
     margin: auto;
     width: 30vw;
     height: 60vh;
-    background: #434D5B;
+    background-color: #E8D8B4;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
 `;
 
 
@@ -47,7 +48,7 @@ const CardButton = styled.button`
         justify-content: center;
         align-items: center;
         font-size: 1em;
-        /* border-radius: 5; */
+        border-radius: 5;
         border: 2px black solid;
 
         :hover {
@@ -56,21 +57,7 @@ const CardButton = styled.button`
             outline-style:none;
         }
 `;
-// const CardInput = styled.input`
-//   padding: 7px 0;
-//   width: 100%;
-//   font-family: inherit;
-//   font-size: 14px;
-//   border-top: 0;
-//   border-right: 0;
-//   border-bottom: 1px solid #ddd;
-//   border-left: 0;
-//   transition: border-bottom-color .25s ease-in;
-//   &:focus {
-//     border-bottom-color: #4ee85e;
-//     outline: 0;
-//   }
-// `;
+
 
 const CardInput = styled.input`
   padding: 7px 0;
@@ -83,6 +70,8 @@ const CardInput = styled.input`
   border-bottom: 1px solid #ddd;
   border-left: 0;
   transition: border-bottom-color .25s ease-in;
+overflow: hidden;
+
 
   &:focus {
     border-bottom-color: #e5195f;
@@ -92,15 +81,15 @@ const CardInput = styled.input`
 
 
 
-/* // const CardWrapper = styled.div`
-//     overflow: hidden;
-//     padding: 0 0 32px;
-//     margin: 48px auto 0;
+// const CardWrapper = styled.div`
+//       overflow: hidden;
+//    padding: 0 0 32px;
+//      margin: 48px auto 0;
 //     width: 300px;
-//     font-family: Quicksand, arial, sans-serif;
+//      font-family: Quicksand, arial, sans-serif;
 //     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-//     border-radius: 5px;
-// `; */
+//      border-radius: 5px;
+//  `;
 
 
 const CardBody = styled.div`
@@ -115,9 +104,9 @@ const Container = styled.form`
 
 class NewUser extends Component {
 
-state = {
-    redirect: false
-}
+    state = {
+        redirect: false
+    }
 
     handleSubmit = (event) => {
         event.preventDefault()
@@ -130,43 +119,43 @@ state = {
 
 
 
-render () {
+    render() {
 
-return (
-this.state.redirect ? <Redirect to ="/business_owners"/> :
+        return (
+            this.state.redirect ? <Redirect to="/business_owners" /> :
 
-<SingleOwnerContainer>
-            <div>
-                <UserCard>
-                {/* <CardWrapper> */}
-                    <Container onSubmit={this.handleSubmit} >
-                        <CardBody>
-                            <div>
-
-                                <CardInput
-                                    name="name" placeholder="Name" type="text" onChange={this.props.handleChange} />
-                                <CardInput name="business_name" placeholder="Business Name" type="text" onChange={this.props.handleChange} />
-                                <CardInput name="business_description" placeholder="Business Description" type="text" onChange={this.props.handleChange} />
-                                <CardInput name="business_address" placeholder="Business Address" type="text" onChange={this.props.handleChange} />
-                                <CardInput name="business_email" placeholder="Business Email" type="text" onChange={this.props.handleChange} />
-                                <CardInput name="business_phone" placeholder="Business Phone" type="text" onChange={this.props.handleChange} />
-                            </div>
-                            <CardButton type="submit" value="submit">Submit</CardButton>
-
-
-                        </CardBody>
-                    </Container>
-                {/* </CardWrapper> */}
-                </UserCard>
-            </div>
-</SingleOwnerContainer>
+                <SingleOwnerContainer>
+                    <div>
+                        <UserCard>
+                            {/* <CardWrapper> */}
+                            <Container onSubmit={this.handleSubmit} >
+                                <CardBody>
+                                    <div>
+                                    <h1>New Owner</h1>
+                                        <CardInput
+                                            name="name" placeholder="Name" type="text" onChange={this.props.handleChange} />
+                                        <CardInput name="business_name" placeholder="Business Name" type="text" onChange={this.props.handleChange} />
+                                        <CardInput name="business_description" placeholder="Business Description" type="text" onChange={this.props.handleChange} />
+                                        <CardInput name="business_address" placeholder="Business Address" type="text" onChange={this.props.handleChange} />
+                                        <CardInput name="business_email" placeholder="Business Email" type="text" onChange={this.props.handleChange} />
+                                        <CardInput name="business_phone" placeholder="Business Phone" type="text" onChange={this.props.handleChange} />
+                                    </div>
+                                    <CardButton type="submit" value="submit">Submit</CardButton>
 
 
+                                </CardBody>
+                            </Container>
+                            {/* </CardWrapper> */}
+                        </UserCard>
+                    </div>
+                </SingleOwnerContainer>
 
 
-)
 
-}
+
+        )
+
+    }
 
 }
 

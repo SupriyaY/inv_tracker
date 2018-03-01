@@ -5,13 +5,15 @@ import {BusinessOwnersContainer} from './StyledComponents/Containers'
 
 
 const UserCard = styled.div`
-height: 40vh;
-            width: 30vw;
+height: 30vh;
+            width: 20vw;
             background-color:#F7F9F9;
             display:flex;
             flex-direction: column;
             /* justify-content: space-around; */
-            align-items: right;
+            align-items: center;
+            margin-top: 30px;
+            margin-right: 10px;
 
             p{
                 width: 50%;
@@ -43,7 +45,7 @@ render () {
     console.log(this.props)
     const businessOwner = this.props.owner.map((owner, index) => {
         return (<Link key={owner.id} to={`/business_owners/${owner.id}`}>
-            <UserCard >
+            <UserCard>
             
                 
                 <h2>{owner.name}</h2>
