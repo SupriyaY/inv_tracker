@@ -1,5 +1,16 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
+import styled from 'styled-components'
+
+
+const Work = styled.div`
+margin-right: 10px;
+
+
+`
+
+
+
 
 
 class Categories extends Component {
@@ -23,11 +34,15 @@ class Categories extends Component {
                 allCategories = filteredCategories.map((category, index) => {
                     console.log(category)
                     return (
+                        <Work>
                         <div key={index}>
-                            <h1>{category.name}</h1>
-                            <div>Click me to go deeper! {category.id}</div> {/* this.props.changeParentCategory(category.id) */}
-                            <div>Click me to go back up! {category.parentId}</div>
+                           <summary> <h1>{category.name}</h1> </summary>
+                           <details>
+                            <div>{category.id}</div> {/* this.props.changeParentCategory(category.id) */}
+                            <div>{category.parentId}</div>
+                            </details>
                         </div>
+</Work>
                     )
                 })
 
