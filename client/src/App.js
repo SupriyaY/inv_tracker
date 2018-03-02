@@ -10,22 +10,15 @@ import Supplier from './components/Supplier'
 import Categories from './components/Categories'
 import Logo from './components/StyledComponents/img/logo.png'
 import styled from 'styled-components'
-
-
 import axios from 'axios'
-
-
-
-
 
 class App extends Component {
   state = {
     business_owners: [],
     newOwner: {},
-    categories: {}
-
+    categories: {},
+    searchParentCategory: "clothes-shoes-and-jewelry"
   }
-
 
   //Axios Calls 
 
@@ -33,7 +26,6 @@ class App extends Component {
     this.getOwners()
     this.getCategories()
   }
-
 
   getOwners = async () => {
     const res = await axios.get('/api/business_owners')
@@ -44,8 +36,8 @@ class App extends Component {
     }
     catch (error) {
       console.log(error)
-    }}
-
+    }
+  }
 
   addNewOwner = (newOwner) => {
     const business_owners = [...this.state.business_owners]
@@ -56,16 +48,16 @@ class App extends Component {
 
   }
 
-handleChange = (event) => {
-const attribute = event.target.name
-const val = event.target.value
-const newOwner = {...this.state.newOwner }
-newOwner[attribute] = val
+  handleChange = (event) => {
+    const attribute = event.target.name
+    const val = event.target.value
+    const newOwner = { ...this.state.newOwner }
+    newOwner[attribute] = val
 
 
-this.setState({newOwner})
+    this.setState({ newOwner })
 
-}
+  }
 
 
   newOwnerPost = () => {
@@ -85,59 +77,65 @@ this.setState({newOwner})
 
   }
 
-// external api to categories
-  getCategories = async() => {
-    const res = await axios.get('http://localhost:3001/api/categories')
+  // external api to categories
+  getCategories = async () => {
+    const res = await axios.get('api/categories')
     const resCategories = res.data
-try{
-  console.log(resCategories)
-  this.setState({categories: resCategories }) 
-}
-
-catch (error) {
-console.log(error)
-}}
-
-
-
-
- 
-      // const resSupplier = await axois.get('/api/suppliers')
-      render() {
-        const categoriesComponent = (props) => (<Categories category={this.state.categories} />)
-
-        const userShowComponent = (props) => (<UsersShow owner={this.state.business_owners} />)
-
-        const userViewComponent = (props) => (<UserView owner={this.state.business_owners} getOwners={this.getOwners} {...props} />)
-        const newUserComponent = (props) => {
-          return (
-            <NewUser  {...props} handleChange={this.handleChange} newOwner={this.newOwnerPost} />
-          )
-          
-        }
-
-        return (
-          <div>
-            <HomeHeader>
-           <a href="/"><img src={Logo} alt="Link"/></a>
-            </HomeHeader>
-            <Router>
-              <div>
-                <Switch>
-                  <Route exact path="/" component={Homepage} />
-                  <Route exact path="/business_owners" component={userShowComponent} />
-                  <Route exact path="/business_owners/new" render={newUserComponent} />
-                  <Route exact path="/business_owners/:id" render={userViewComponent} />
-                  <Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
-                  <Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
-                  <Route exact path="/categories" render={categoriesComponent} />
-                </Switch>
-              </div>
-            </Router>
-            <Footer />
-            </div>
-        );
-      }
+    try {
+      console.log(resCategories)
+      this.setState({ categories: resCategories })
     }
 
-    export default App;
+    catch (error) {
+      console.log(error)
+    }
+  }
+
+  changeSearchCategory = (categoryId) => {
+    this.setState({searchParentCategory: categoryId})
+  }
+
+  // const resSupplier = await axois.get('/api/suppliers')
+  render() {
+    const categoriesComponent = (props) => 
+      (<Categories 
+        category={this.state.categories} 
+        searchParentCategory={this.state.searchParentCategory} 
+        changeSearchCategory={this.state.changeSearchCategory}
+        {...props} />)
+
+    const userShowComponent = (props) => (<UsersShow owner={this.state.business_owners} />)
+
+    const userViewComponent = (props) => (<UserView owner={this.state.business_owners} getOwners={this.getOwners} {...props} />)
+    const newUserComponent = (props) => {
+      return (
+        <NewUser  {...props} handleChange={this.handleChange} newOwner={this.newOwnerPost} />
+      )
+
+    }
+
+    return (
+      <div>
+        <HomeHeader>
+          <a href="/"><img src={Logo} alt="Link" /></a>
+        </HomeHeader>
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/business_owners" component={userShowComponent} />
+              <Route exact path="/business_owners/new" render={newUserComponent} />
+              <Route exact path="/business_owners/:id" render={userViewComponent} />
+              <Route exact path="/business_owners/:id/inventories/:id" component={Inventory} />
+              <Route exact path="/business_owners/:id/inventories/:id/suppliers/:id" component={Supplier} />
+              <Route exact path="/categories" render={categoriesComponent} />
+            </Switch>
+          </div>
+        </Router>
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default App;

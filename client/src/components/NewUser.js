@@ -114,10 +114,7 @@ class NewUser extends Component {
         this.props.newOwner()
         this.setState({ redirect: true })
 
-
-
     }
-
 
 
     render() {
