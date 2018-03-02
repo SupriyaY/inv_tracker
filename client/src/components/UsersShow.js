@@ -3,7 +3,6 @@ import { Redirect, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {BusinessOwnersContainer} from './StyledComponents/Containers'
 
-
 const UserCard = styled.div`
             height: 40vh;
             width: 35vh;
@@ -33,6 +32,8 @@ const UserCard = styled.div`
                 :hover{
                     color:#2E4052;
                 }
+
+            
             }
 
 `
@@ -50,8 +51,6 @@ render () {
     const businessOwner = this.props.owner.map((owner, index) => {
         return (<Link key={owner.id} to={`/business_owners/${owner.id}`}>
             <UserCard>
-            
-                
                 <h2>{owner.name}</h2>
                 <p>{owner.business_name}</p>
             </UserCard>
