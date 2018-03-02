@@ -35,12 +35,18 @@ flex-wrap: wrap;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+ 
 `
 export const ContainerHome = Container.extend`
  background: linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)),url(${Clothing}) center no-repeat;
 background-size: cover;
 width: 100vw;
 min-height: 100vh;
+   h1{
+color: white;
+text-align: center;
+
+    }
 `
 
 
@@ -54,6 +60,11 @@ export const SupplierContainer = Container.extend`
  width: 100vw;
  min-height: 60vh;
 background-size: cover;
+ h1{
+color: white;
+text-align: center;
+font-size: 2em;
+    }
 `
 
 export const WordsContainer = styled.div`
@@ -65,7 +76,6 @@ export const WordsContainer = styled.div`
         align-items: center;
         overflow: hidden;
         color: black; 
-        
       
         p{
             font-size: 1.5em;
@@ -76,7 +86,7 @@ export const WordsContainer = styled.div`
             color: Black;
             text-decoration: none;
             :hover {
-                color:#blue;
+                color: blue;
             }
         } 
 

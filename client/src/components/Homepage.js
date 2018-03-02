@@ -8,11 +8,7 @@ import {WordsContainer} from './StyledComponents/Containers'
 import {SupplierContainer} from './StyledComponents/Containers'
 import styled from 'styled-components'
 
-const Paragraph = styled.div`
-display: flex;
-width: 100vw;
-justify-content: center;
-`
+
 
 
 
@@ -27,7 +23,7 @@ return (
 <SupplierContainer>
 
             {/* <Link to="/business_owners">Welcome, Business Owners</Link>  */}
-<h1>HI</h1>
+<h1>Welcome to Link.</h1>
 
 </SupplierContainer>
 
@@ -48,7 +44,8 @@ return (
 
 <ContainerHome>
 
-            <h1>HI</h1>
+            <h1>The most courageous act is still to think for yourself. Aloud. <br/> -Coco Channel
+            </h1>
     </ContainerHome>
 
 </div>
