@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {BusinessOwnersContainer} from './StyledComponents/Containers'
-import Plus from './StyledComponents/img/plus.png'
+import NewPlus from './StyledComponents/img/plus.png'
 
 const UserCard = styled.div`
             height: 30vh;
@@ -33,7 +33,6 @@ const UserCard = styled.div`
                 :hover{
                     color:#2E4052;
                 }
-
             
             }
 
@@ -63,7 +62,7 @@ render () {
 
             <BusinessOwnersContainer>
                 {businessOwner}
-                <Link to="/business_owners/new"><img src={Plus} alt="Add"/></Link>
+                <Link to="/business_owners/new"><img src={NewPlus} alt="Add"/></Link>
                 </BusinessOwnersContainer>
         )
 

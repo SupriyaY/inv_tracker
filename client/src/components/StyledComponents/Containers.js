@@ -53,6 +53,9 @@ text-align: center;
 export const SingleOwnerContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
 background-size: cover;
+ img{
+     height: 80px;
+ }
 `
 
 export const SupplierContainer = Container.extend`
