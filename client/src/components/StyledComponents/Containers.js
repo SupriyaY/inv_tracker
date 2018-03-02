@@ -52,20 +52,19 @@ background-size: cover;
 export const SupplierContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Supplier}) center no-repeat;
  width: 100vw;
- min-height: 80vh;
+ min-height: 60vh;
 background-size: cover;
 `
 
 export const WordsContainer = styled.div`
-        margin: 40px;
-        height: 80vh;
-        width: 30vw;
+        height: 60vh;
+        width: 100vw;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        color: black;
-        text-align: center;
+        color: black; 
         
         h1{
             font-family: 'Patua One', cursive;
@@ -74,16 +73,16 @@ export const WordsContainer = styled.div`
         }
         p{
             font-size: 1.5em;
-        }
-        /* a{
-            font-size: 4em;
+        } 
+        a{
+            font-size: 1em;
             font-family: 'Lobster', cursive;
             color: Black;
             text-decoration: none;
             :hover {
                 color:#blue;
             }
-        } */
+        } 
 
 `
 

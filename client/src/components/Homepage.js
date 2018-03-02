@@ -6,6 +6,16 @@ import { Link } from 'react-router-dom'
 import {PageHolder} from './StyledComponents/Containers'
 import {WordsContainer} from './StyledComponents/Containers'
 import {SupplierContainer} from './StyledComponents/Containers'
+import styled from 'styled-components'
+
+const Paragraph = styled.div`
+display: flex;
+width: 100vw;
+justify-content: center;
+`
+
+
+
  
 class Homepage extends Component{
 
@@ -29,8 +39,11 @@ return (
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
                 anim id est laborum.</p>
+            
+                
         <Link to="/business_owners">Business Owners</Link> 
             <Link to="/categories">Categories</Link> 
+            
 </WordsContainer>
 
 <ContainerHome>
