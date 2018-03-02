@@ -12,13 +12,13 @@ const UserCard = styled.div`
             flex-direction: column;
             align-items: center;
             margin: 10px;
-
-
+            margin-top: 20px;
             p{
                 width: 50%;
                 text-align: center;
                 color: black;
                 margin-top: 1vh;
+    
             }
 
             h1, h2, h3 {

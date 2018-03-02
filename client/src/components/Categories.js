@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import styled from 'styled-components'
 
 
-const Work = styled.div`
+const Work = styled.div `
 margin-right: 10px;
-
 
 `
 
