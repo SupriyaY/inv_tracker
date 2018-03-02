@@ -26,8 +26,8 @@ return (
 <div>
 <SupplierContainer>
 
-            <Link to="/business_owners">Welcome, Business Owners</Link> 
-
+            {/* <Link to="/business_owners">Welcome, Business Owners</Link>  */}
+<h1>HI</h1>
 
 </SupplierContainer>
 
@@ -47,6 +47,8 @@ return (
 </WordsContainer>
 
 <ContainerHome>
+
+            <h1>HI</h1>
     </ContainerHome>
 
 </div>

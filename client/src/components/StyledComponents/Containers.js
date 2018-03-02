@@ -66,17 +66,13 @@ export const WordsContainer = styled.div`
         overflow: hidden;
         color: black; 
         
-        h1{
-            font-family: 'Patua One', cursive;
-            font-size: 3em;
-            margin: 0;
-        }
+      
         p{
             font-size: 1.5em;
         } 
         a{
-            font-size: 1em;
-            font-family: 'Lobster', cursive;
+            font-size: 1.5em;
+            font-family: sans-serif;
             color: Black;
             text-decoration: none;
             :hover {
