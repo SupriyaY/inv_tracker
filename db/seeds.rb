@@ -19,6 +19,7 @@ end
 alexa = BusinessOwner.create(
 name: "Alexa Chung",
 business_name: "Chung, Inc",
+photo: "https://i.imgur.com/j3G9sGw.jpg",
 business_description: "Curating collections of denim for Couture Houses",
 business_address: "123 Lakeview Street, London, England 12345",
 business_email: "chung1@gmail.com",
@@ -28,15 +29,17 @@ business_phone: "07712345678"
 jason = BusinessOwner.create(
 name: "Jason Wu",
 business_name: "Wu, Inc",
+photo: "https://i.imgur.com/j3G9sGw.jpg",
 business_description: "Curating collections of dressers for first ladies",
 business_address: "123 Lakeview Street, New York, NY 12345",
 business_email: "wu1@gmail.com",
 business_phone: "07743345678"
 )
 
-olivier = BusinessOwner.create(
-name: "Olivier Rousteing",
-business_name: "Rousteing, Inc",
+marianna = BusinessOwner.create(
+name: "Marianna Hewitt",
+business_name: "Hewitt, Inc",
+photo: "https://i.imgur.com/j3G9sGw.jpg",
 business_description: "Curating a collection of nude heels",
 business_address: "123 Lucille Street, Paris, France 12345",
 business_email: "rousteing1@gmail.com",
@@ -83,7 +86,7 @@ BoInvSupplier.create(
 )
 
 BoInvSupplier.create(
-    business_owner: olivier,
+    business_owner: marianna,
     inventory: heels,
     supplier: amazon
 )

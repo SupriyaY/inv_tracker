@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180228223312) do
   create_table "business_owners", force: :cascade do |t|
     t.string "name"
     t.string "business_name"
+    t.string "photo"
     t.string "business_description"
     t.string "business_address"
     t.string "business_email"

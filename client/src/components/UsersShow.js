@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {BusinessOwnersContainer} from './StyledComponents/Containers'
+import Plus from './StyledComponents/img/plus.png'
 
 const UserCard = styled.div`
-            height: 40vh;
-            width: 35vh;
-            background-color:#F7F9F9;
+            height: 30vh;
+            width: 45vh;
+            background-color:#E8D8B4;
             display:flex;
             flex-direction: column;
             align-items: center;
@@ -62,7 +63,7 @@ render () {
 
             <BusinessOwnersContainer>
                 {businessOwner}
-                <Link to="/business_owners/new">Sign up</Link>
+                <Link to="/business_owners/new"><img src={Plus} alt="Add"/></Link>
                 </BusinessOwnersContainer>
         )
 
