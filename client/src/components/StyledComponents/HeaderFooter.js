@@ -24,6 +24,8 @@ export const Header = styled.header`
 `
 
 
+
+
 export const Footer = styled.header`
 height: 10vh;
 width: 100vw;
@@ -37,16 +39,21 @@ overflow: hidden;
 position: fixed;
  
  a{
-     margin-top: 1vh;
-     margin-bottom: 1vh;
+margin-bottom: 1vh;
 margin-left: 3vw;
 height: 80%;
 width: auto;
- } 
+text-decoration: none;
+color: black;
+font-size: 1em;
+    &:hover{
+color: blue
+    } 
  img {
      height: 8vh;
 
  }
+}
 `
 
 
@@ -54,5 +61,5 @@ export default {
     Header, 
     Footer,
     HomeHeader,
-    Logo
+    Logo,
 }

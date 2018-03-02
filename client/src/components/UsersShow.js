@@ -5,22 +5,25 @@ import {BusinessOwnersContainer} from './StyledComponents/Containers'
 
 
 const UserCard = styled.div`
-            height: 45vh;
+            height: 40vh;
             width: 35vh;
             background-color:#F7F9F9;
             display:flex;
             flex-direction: column;
-            /* justify-content: space-around; */
             align-items: center;
-            /* margin-top: 5px; */
             margin: 10px;
 
             p{
                 width: 50%;
+                text-align: center;
+                color: black;
+                margin-top: 1vh;
             }
 
             h1, h2, h3 {
                 margin: 0;
+                text-decoration: none;
+                color: black;
             }
 
             a {
@@ -60,7 +63,7 @@ render () {
 
             <BusinessOwnersContainer>
                 {businessOwner}
-<Link to="/business_owners/new">Sign up</Link>
+                <Link to="/business_owners/new">Sign up</Link>
                 </BusinessOwnersContainer>
         )
 
