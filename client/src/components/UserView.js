@@ -6,15 +6,15 @@ import axios from 'axios'
 
 const UserCard = styled.div`
             height: 30vh;
-            width: 30vh;
-            background-color:#F7F9F9;
+            width: 45vh;
+            background-color: #E8D8B4;
             display:flex;
             flex-direction: column;
             align-items: right;
             margin: 10px;
             p {
                 text-align: left;
-                width: 50%;
+                width: 100%;
                 margin: 0;
             }
 
