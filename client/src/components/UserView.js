@@ -74,23 +74,22 @@ return(
 
 <SingleOwnerContainer>
         <UserCard>
-            <h3>{this.state.business_owner.name}</h3>
-            <p>{this.state.business_owner.business_name}</p>
-            <p>{this.state.business_owner.business_description}</p>
-            <p>{this.state.business_owner.business_email}</p>
-            <p>{this.state.business_owner.business_phone}</p>
+            <h2>{this.state.business_owner.name}</h2>
+            <p><strong>Business: </strong> {this.state.business_owner.business_name}</p>
+            <p><strong>Description: </strong> {this.state.business_owner.business_description}</p>
+            <p><strong>Email: </strong> {this.state.business_owner.business_email}</p>
+            <p><strong> Phone: </strong> {this.state.business_owner.business_phone}</p>
         </UserCard>
-
 
         <UserCard>
             {this.state.business_owner.inventories.map((inventory, index) => {  
             
                 return (
                     <div>
-                        
-<div>{inventory.category}</div>
-<div>{inventory.name}</div>
-<div>{inventory.description}</div>
+                        <h2>Inventory</h2>                 
+                        <div><strong>Category: </strong>{inventory.category}</div>
+                        <div><strong>Name: </strong>{inventory.name}</div>
+                        <div><strong>Description: </strong>{inventory.description}</div>
 </div>
                    
                 )
@@ -106,12 +105,11 @@ return(
 
                 return (
                     <div>
-
-                        <div>{supplier.name}</div>
-                        <div>{supplier.address}</div>
-                        <div>{supplier.contact_name}</div>
-                        <div>{supplier.contact_email}</div>
-                        <div>{supplier.contact_phone}</div>
+                        <h2>{supplier.name}</h2>
+                        <div><strong>Address: </strong>{supplier.address}</div>
+                        <div><strong>POC: </strong>{supplier.contact_name}</div>
+                        <div><strong>Email: </strong>{supplier.contact_email}</div>
+                        <div><strong>Phone: </strong>{supplier.contact_phone}</div>
                     </div>
 
                 )

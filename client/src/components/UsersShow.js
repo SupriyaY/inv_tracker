@@ -13,6 +13,7 @@ const UserCard = styled.div`
             align-items: center;
             margin: 10px;
 
+
             p{
                 width: 50%;
                 text-align: center;
@@ -21,9 +22,10 @@ const UserCard = styled.div`
             }
 
             h1, h2, h3 {
-                margin: 0;
+                margin-right: 5px;
                 text-decoration: none;
                 color: black;
+            
             }
 
             a {
