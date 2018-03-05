@@ -33,7 +33,7 @@ Figma was the tool used to design the prototype of the application
 ![Wireframe](https://github.com/SupriyaY/inv_tracker/blob/master/Screen%20Shot%202018-03-01%20at%201.47.49%20AM.png)
 
 
-User Stories Management - [Trello] (https://trello.com/b/wCyE9Qn8/capstone)
+User Stories Management - [Trello](https://trello.com/b/wCyE9Qn8/capstone)
 
 Presentation slides - PitchDeck
 
