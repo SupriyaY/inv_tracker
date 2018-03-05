@@ -94,4 +94,4 @@ return (
 
 
 
-export default Inventory;
+ export default Inventory;

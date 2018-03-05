@@ -35,12 +35,12 @@ Figma was the tool used to design the prototype of the application
 
 User Stories Management - [Trello](https://trello.com/b/wCyE9Qn8/capstone)
 
-Presentation slides - PitchDeck
+Presentation slides - [Pitch Deck](https://docs.google.com/presentation/d/1Ox_N6X6wLHgILcQlosDC2e8ChNDWKJYKYhG6_zIprEE/edit#slide=id.p)
 
 ## Features
 
 * Create a business owner - frontend
-* CRUD on business owner's model on the backend, admin privilages.
+* CRUD on business owner's model on the backend, admin privileges.
 
 ## Future Improvements
 

@@ -122,11 +122,6 @@ return(
         </UserCard>
         
 
-   
-
-         
-{/*         
-        <Link to={`/business_owners/${this.state.business_owner.id}/inventories/`}>Inventory</Link>  */}
 </SingleOwnerContainer>
 
 

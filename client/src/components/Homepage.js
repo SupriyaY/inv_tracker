@@ -29,16 +29,16 @@ return (
 
 
 <WordsContainer>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-                anim id est laborum.</p>
-            
+
+                <p>Welcome to Link.  Let's create a space for you, as a retail business owner, to connect with
+                 other like-minded retail business owners. </p>
+                <p> What types of inventories are they purchasing and who the supplier? At Link, we want to able to get all of these questions 
+                 answered for you. When you select the link "Business Owners below, you can view all of the business owners.  Click on each owmer's business card to
+                 view to learn more about their business, inventory, and supplier. You can add yourself as a business owner and become part our community! 
+                 </p>       
                 
         <Link to="/business_owners">Business Owners</Link> 
-            <Link to="/categories">Categories</Link> 
+            <Link to="/categories">Categories</Link> <p>Under Contruction</p>
             
 </WordsContainer>
 
