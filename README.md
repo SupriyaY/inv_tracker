@@ -11,6 +11,12 @@ https://inv-tracker.herokuapp.com/
 
 ## Technology Used
 
+* Ruby on Rails - backend framework
+* React - frontend library
+* HTML5, CSS3
+* HTTParty used to call 
+
+
 ## Wireframes, ERD, and pitch deck
 
 ERDs were used to create the data models
