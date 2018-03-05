@@ -2,7 +2,11 @@
  
 ## Overview
 
+The application I created is called Link.  The purpose of the application is to create a shared space for business owners, with clothing retail businesses, to able t 
+
 ## Link to Heroku
+
+https://inv-tracker.herokuapp.com/
 
 
 ## Technology Used
@@ -19,6 +23,9 @@ Figma was the tool used to design the prototype of the application
 ![Wireframe](https://github.com/SupriyaY/inv_tracker/blob/master/Screen%20Shot%202018-03-01%20at%201.47.49%20AM.png)
 
 
+
+
 ## Features
 
 ## Future Improvements
+
