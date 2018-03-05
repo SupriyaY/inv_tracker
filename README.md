@@ -6,7 +6,7 @@ The application I created is called Link.  The purpose of the application is to 
 
 When a user initially opens up a browser with the site's URL, they are can read about the application.  Then, they can select a link called Business Owners.  Once redirected to the business owner's page, a user can add themselves to a "business card".  They have the ability to view other owner's inventories and supplier information.  An administrator has the ability to add, update, delete, and create a business owner.  There is another link from the homepage called Categories, which currently lists the various categories along with minimal details about each category.  This section is not completely functional and is currently under contruction.  
 
-Further funtionalities regarding the suppliers and inventories are under contruction as well.
+Further funtionalities regarding the suppliers and inventories are under construction as well.
 
 ## Link to Heroku
 
