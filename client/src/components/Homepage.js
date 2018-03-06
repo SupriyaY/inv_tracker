@@ -33,8 +33,8 @@ return (
                 <p>Welcome to Link.  Let's create a space for you, as a retail business owner, to connect with
                  other like-minded retail business owners. </p>
                 <p> What types of inventories are being purchasing and who is the supplier? At Link, we want to able to get all of these questions 
-                 answered for you. When you select Business Owners below, you can view all of the business owners.  Click on each owner's business card to
-                 to learn more about their business, inventory, and supplier. You can add yourself as a business owner and become part our community! 
+                 answered for you. When you select Business Owners below, you can view all of the business owners currently in our system.  Click on each owner's business card to
+                 to learn more about their business, inventory, and suppliers. You can add yourself as a business owner and become part our community! 
                  </p>       
                 
         <Link to="/business_owners">Business Owners</Link> 
