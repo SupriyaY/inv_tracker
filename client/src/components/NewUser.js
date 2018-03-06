@@ -6,16 +6,7 @@ import styled from 'styled-components'
 
 
 
-// const UserCard = styled.div`
-// height: 60vh;
-//             width: 30vw;
-//             background-color:#F7F9F9;
-//             display:flex;
-//             flex-direction: column;
-//             justify-content: space-around;
-//             align-items: right;
 
-// `;
 
 
 const UserCard = styled.div`

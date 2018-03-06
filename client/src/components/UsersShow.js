@@ -5,14 +5,14 @@ import {BusinessOwnersContainer} from './StyledComponents/Containers'
 import NewPlus from './StyledComponents/img/plus.png'
 
 const UserCard = styled.div`
-            height: 30vh;
-            width: 45vh;
+            min-height: 30vh;
+            min-width: 40vh;
             background-color:#E8D8B4;
             display:flex;
             flex-direction: column;
             align-items: center;
             margin: 10px;
-            margin-top: 20px;
+            margin-top: 50px;
             p{
                 width: 50%;
                 text-align: center;

@@ -20,8 +20,8 @@ export const PageHolder = styled.div`
 `
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
