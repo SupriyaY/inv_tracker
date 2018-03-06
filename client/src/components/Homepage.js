@@ -22,7 +22,6 @@ return (
 <div>
 <SupplierContainer>
 
-            {/* <Link to="/business_owners">Welcome, Business Owners</Link>  */}
 <h1>Welcome to Link.</h1>
 
 </SupplierContainer>

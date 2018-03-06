@@ -71,7 +71,7 @@ font-size: 2em;
 `
 
 export const WordsContainer = styled.div`
-        height: 60vh;
+        height: 70vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -82,6 +82,7 @@ export const WordsContainer = styled.div`
       
         p{
             font-size: 1.5em;
+            margin: 20px;
         } 
         a{
             font-size: 1.5em;
