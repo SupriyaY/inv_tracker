@@ -65,7 +65,7 @@ align-items: center;
 export const SupplierContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Supplier}) center no-repeat;
  width: 100vw;
- min-height: 60vh;
+ height: 60vh;
 background-size: cover;
  h1{
 color: white;
@@ -85,13 +85,16 @@ export const WordsContainer = styled.div`
       
         p{
             font-size: 1.5em;
-            margin: 20px;
+            margin: 30px;
+            font-family: 'Quicksand', sans-serif;
         } 
         a{
             font-size: 1.5em;
             font-family: sans-serif;
             color: Black;
             text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+
             :hover {
                 color: blue;
             }
