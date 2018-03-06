@@ -53,6 +53,10 @@ text-align: center;
 export const SingleOwnerContainer = Container.extend`
  background:linear-gradient(0deg, rgba(36,35,37,0.6), rgba(36,35,37,0.6)), url(${Clothing}) center no-repeat;
 background-size: cover;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+align-items: center;
  img{
      height: 80px;
  }
@@ -71,13 +75,12 @@ font-size: 2em;
 `
 
 export const WordsContainer = styled.div`
-        height: 70vh;
+        min-height: 70vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         color: black; 
       
         p{
