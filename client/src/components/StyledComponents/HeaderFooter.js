@@ -36,7 +36,7 @@ align-self: flex-end;
 export const HomeHeader = Header.extend`
 background-color: white;
 overflow: hidden;
-position: fixed;
+/* position: fixed; */
  
  a{
 margin-bottom: 1vh;
