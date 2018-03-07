@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import Inventory from './img/boxes.jpg'
 import Merchandise from './img/merch.jpg'
 import Clothing from './img/clothing.jpg'
-import Supplier from './img/supplier.jpg'
-import Style from './img/store.jpg'
+import Supplier from './img/supplierstwo.jpg'
 
 
 
