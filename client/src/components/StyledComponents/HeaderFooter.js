@@ -6,7 +6,7 @@ import Link from './img/logo.png'
 const Logo = styled.img`
 margin-top: 1vh;
 margin-left: 3vw;
-height:80%;
+height: 80%;
 width: auto;
 &:hover{
     margin-top:1.3vh;

@@ -48,6 +48,13 @@ const UserCard = styled.div`
 class UsersShow extends Component {
 
 
+
+
+
+
+
+
+
 render () {
     console.log(this.props)
     const businessOwner = this.props.owner.map((owner, index) => {
