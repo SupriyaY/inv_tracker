@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import { SingleOwnerContainer } from './StyledComponents/Containers'
+import EditUser from './EditUser'
 import axios from 'axios'
 
 const UserCard = styled.div`
@@ -33,6 +34,28 @@ const UserCard = styled.div`
 
 
 `
+
+const Button = styled.button`
+background-color: white;
+color: #4CA1AF;
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
+border:2px solid #4CA1AF;
+border-radius: 3px;
+    &:hover {
+    opacity: 0.8;
+    position: relative;
+    bottom: -5px;
+    }
+ `;
+
+
+
+
+
+
+
 class UserView extends Component {
 
     state = {
@@ -40,6 +63,7 @@ class UserView extends Component {
             inventories: [],
             suppliers: []
         },
+        updateOwner: {},
         redirect: false
     }
     
@@ -61,6 +85,41 @@ this.setState({business_owner: res.data})
     }
 }
 
+    handleChange = (event) => {
+        const updateOwner = {
+            ...this.state.business_owner
+        }
+        updateOwner[event.target.name] = event.target.value
+        this.setState({ user: updateOwner })
+    }
+
+    editOwner = async () => {
+        try {
+            const response = await axios.patch(`/api/business_owners/${this.state.business_owner.id}`, this.state.business_owner)
+
+            this.setState({ updatedOwner: response.data, redirectToEdit: false })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    handleChange = (event) => {
+        const updateOwner = {
+            ...this.state.business_owner
+        }
+        updateOwner[event.target.name] = event.target.value
+        this.setState({ user: updateOwner })
+    }
+
+    handleEdit = (event) => {
+        event.preventDefault()
+        this.editOwner()
+        this.setState({ redirectToEdit: false })
+    }
+
+    setStateToEdit = () => {
+        this.setState({ redirectToEdit: true })
+    }
 
 
 
@@ -71,7 +130,8 @@ render() {
 
 
 return(
-
+    this.state.redirect ? <Redirect to={'/business_owners'} /> :
+        this.state.redirectToEdit ? <EditUser owner={this.state.business_owner} handleEdit={this.handleEdit} handleChange={this.handleChange} /> :
 <SingleOwnerContainer>
         <UserCard>
             <h2>{this.state.business_owner.name}</h2>
@@ -79,6 +139,9 @@ return(
             <p><strong>Description: </strong> {this.state.business_owner.business_description}</p>
             <p><strong>Email: </strong> {this.state.business_owner.business_email}</p>
             <p><strong> Phone: </strong> {this.state.business_owner.business_phone}</p>
+
+            <Button onClick={this.setStateToEdit}>Edit</Button>
+            {/* <DeleteButton onClick={this.deleteConfirm}>Delete</DeleteButton> */}
         </UserCard>
 
         <UserCard>
