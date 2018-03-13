@@ -77,12 +77,6 @@ overflow: hidden;
 
 
 
-
-
-
-
-
-
 const EditUser = (props) => {
 
 return(
@@ -95,13 +89,12 @@ return(
                         <New>
                             <h1>Edit Owner</h1>
                         </New>
-                        <input
-                            name="name" placeholder="Name" type="text" onChange={props.handleChange} />
-                        <input name="business_name" placeholder="Business Name" type="text" onChange={props.handleChange} />
-                        <input name="business_description" placeholder="Business Description" type="text" onChange={props.handleChange} />
-                        <input name="business_address" placeholder="Business Address" type="text" onChange={props.handleChange} />
-                        <input name="business_email" placeholder="Business Email" type="text" onChange={props.handleChange} />
-                        <input name="business_phone" placeholder="Business Phone" type="text" onChange={props.handleChange} />
+                        <input name="name" placeholder="Name" type="text" onChange={props.handleChange} value={props.business_owner.name} />
+                        <input name="business_name" placeholder="Business Name" type="text" onChange={props.handleChange} value={props.business_owner.business_name}  />
+                        <input name="business_description" placeholder="Business Description" type="text" onChange={props.handleChange} value={props.business_owner.business_description}  />
+                        <input name="business_address" placeholder="Business Address" type="text" onChange={props.handleChange} value={props.business_owner.business_address}  />
+                        <input name="business_email" placeholder="Business Email" type="text" onChange={props.handleChange} value={props.business_owner.business_email}  />
+                        <input name="business_phone" placeholder="Business Phone" type="text" onChange={props.handleChange} value={props.business_owner.business_phone} />
                     </div>
                     <CardButton type="submit" value="submit">Submit</CardButton>
 
