@@ -63,7 +63,7 @@ class UserView extends Component {
             inventories: [],
             suppliers: []
         },
-        updateOwner: {},
+        // updateOwner: {},
         redirect: false
     }
     
@@ -93,33 +93,33 @@ this.setState({business_owner: res.data})
         this.setState({ user: updateOwner })
     }
 
-    editOwner = async () => {
-        try {
-            const response = await axios.patch(`/api/business_owners/${this.state.business_owner.id}`, this.state.business_owner)
+    // editOwner = async () => {
+    //     try {
+    //         const response = await axios.patch(`/api/business_owners/${this.state.business_owner.id}`, this.state.business_owner)
 
-            this.setState({ updatedOwner: response.data, redirectToEdit: false })
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    //         this.setState({ updatedOwner: response.data, redirectToEdit: false })
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
 
-    handleChange = (event) => {
-        const updateOwner = {
-            ...this.state.business_owner
-        }
-        updateOwner[event.target.name] = event.target.value
-        this.setState({ user: updateOwner })
-    }
+    // handleChange = (event) => {
+    //     const updateOwner = {
+    //         ...this.state.business_owner
+    //     }
+    //     updateOwner[event.target.name] = event.target.value
+    //     this.setState({ user: updateOwner })
+    // }
 
-    handleEdit = (event) => {
-        event.preventDefault()
-        this.editOwner()
-        this.setState({ redirectToEdit: false })
-    }
+    // handleEdit = (event) => {
+    //     event.preventDefault()
+    //     this.editOwner()
+    //     this.setState({ redirectToEdit: false })
+    // }
 
-    setStateToEdit = () => {
-        this.setState({ redirectToEdit: true })
-    }
+    // setStateToEdit = () => {
+    //     this.setState({ redirectToEdit: true })
+    // }
 
 
 
@@ -140,7 +140,7 @@ return(
             <p><strong>Email: </strong> {this.state.business_owner.business_email}</p>
             <p><strong> Phone: </strong> {this.state.business_owner.business_phone}</p>
 
-            <Button onClick={this.setStateToEdit}>Edit</Button>
+            {/* <Button onClick={this.setStateToEdit}>Edit</Button> */}
             {/* <DeleteButton onClick={this.deleteConfirm}>Delete</DeleteButton> */}
         </UserCard>
 
