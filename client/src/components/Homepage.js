@@ -37,7 +37,7 @@ return (
                  </p>       
                 
         <Link to="/business_owners">Business Owners</Link> 
-            <Link to="/categories">Categories(Under Construction)</Link> 
+            <Link to="/categories">Categories</Link> 
             
 </WordsContainer>
 
